@@ -28,14 +28,14 @@ func new_game():
 func track_results(i):
 	if i in result_list:
 		print("lose")
-		print(result_list)
+		#print(result_list)
 		new_game()
 	else:
 		result_list.append(i)
 		die_faces[i].modulate.a = 1
 	if len(result_list) == 6:
-		print("win")
-		print(result_list)
+		print("win!")
+		#print(result_list)
 	pass
 	
 func win():

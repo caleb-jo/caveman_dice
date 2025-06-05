@@ -10,7 +10,7 @@ var velocity
 var board_size_x = 512
 var board_size_y = 512
 var roll_completed
-var roll_time = 0.1
+var roll_time = 1.5
 var die_value
 
 
@@ -27,13 +27,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#Input.is_action_just_pressed("roll")
-	if true and roll_completed and roll_accepted_bool: #spacebar
+	if Input.is_action_just_pressed("roll") and roll_completed and roll_accepted_bool: #spacebar
 		$WaitTimer.start(roll_time + 1)
 		roll_completed = false
 		roll_die()
 		calculate_trajectory()
 	
-	if true and not roll_accepted_bool and is_valid_die_result(str(die_value)):
+	if Input.is_action_just_pressed("roll") and not roll_accepted_bool and is_valid_die_result(str(die_value)):
 		roll_accepted_bool = true
 		#print(roll_completed)
 		#print("emitting signal")
