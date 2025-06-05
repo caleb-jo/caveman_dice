@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://4ckl75yd31qs"]
+
+[ext_resource type="PackedScene" uid="uid://c8ngimoatu5yt" path="res://die.tscn" id="1_2xkqv"]
+[ext_resource type="Script" path="res://main.gd" id="1_rdl5g"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rdl5g")
+
+[node name="die" parent="." instance=ExtResource("1_2xkqv")]
+
+[node name="RollTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="StartPosition" type="Marker2D" parent="."]
