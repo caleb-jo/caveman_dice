@@ -89,9 +89,17 @@ func is_valid_die_result(string):
 	else:
 		return false
 
-func _on_body_entered(body: TileMapLayer) -> void:
-	#print(velocity.x, velocity.y)
-	#print(position.round())
-	calculate_trajectory()
-	#print("Collided")
-	#print(velocity.x, velocity.y)
+func _on_body_entered(body: Node) -> void:
+	print("collided")
+	if body is TileMapLayer:
+		#print(velocity.x, velocity.y)
+		#print(position.round())
+		calculate_trajectory()
+		#print("Collided")
+		#print(velocity.x, velocity.y)
+	else:
+		pass
+
+func _on_area_entered(area) -> void:
+	print("area collision")
+	pass

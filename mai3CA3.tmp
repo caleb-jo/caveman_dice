@@ -53,6 +53,7 @@ tile_map_data = PackedByteArray("AAAAAAkAAwAAAAAAAAAAAAgAAwAAAAAAAAAAAAcAAwAAAAA
 tile_set = SubResource("TileSet_5v7kl")
 
 [node name="die" parent="." instance=ExtResource("1_2xkqv")]
+speed = 1500
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(100, 100)
